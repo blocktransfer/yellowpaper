@@ -6,6 +6,8 @@
 \usepackage[square,numbers]{natbib}
 \usepackage[bottom]{footmisc}
 \setlength\columnsep{.5in}
+\pagenumbering{arabic}
+\graphicspath{{imgs/}}
 \usepackage[a4paper,
     bindingoffset=0in,
     left=0.75in,
@@ -14,7 +16,6 @@
     bottom=1.25in,
     footskip=.25in
 ]{geometry}
-\pagenumbering{arabic}
 
 \begin{document}
 \thispagestyle{empty}
@@ -22,7 +23,7 @@
 \vspace*{.2in}
 \begin{figure}
     \centering
-    \includegraphics[width=240pt]{imgs/logo.png}
+    \includegraphics[width=240pt]{logo.png}
 \end{figure}
 
 
@@ -46,7 +47,7 @@
   \begin{itemize}
       \item control stock lending and margin, generating fake shares en mass;\footnote{How can stocks reach their full market value with mass sales of non-existent shares? See Page \ref{the_problem}.}
       
-      \item systematically disenfranchise global investors from buying stocks; \cite{Senate_1974} and
+      \item systematically disenfranchise global investors from buying stocks; \cite{Senate_1974,Funch_et_2003} and
       
       \item through manipulative systems, ultimately cost investors over \$3.75T/year.\footnote{We estimate these hidden fees cost the average stock investor 0.5\%/year (\$600k after \$1k/month/40 years in indexes).}
   \end{itemize}
@@ -93,7 +94,7 @@ When we assign all our trust to a few central bookkeepers, we grant them the pow
 
 \begin{figure}[H]
     \raggedleft 
-    \includegraphics[width=\linewidth]{imgs/centralized.png}
+    \includegraphics[width=\linewidth]{centralized.png}
     \caption{Centralized Bookkeeping}
     \label{fig:centralized}
 \end{figure}
@@ -143,7 +144,7 @@ Regulation gives agents three days to respond to ``routine'' transfers, meaning 
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=180]{imgs/medallion.jpg}
+    \includegraphics[width=180]{medallion.jpg}
     \caption{A Medallion Stamp}
     \label{fig:decentralized}
 \end{figure}
@@ -165,7 +166,7 @@ Instead of manipulating Excel spreadsheets, digital assets use programmatic ``at
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=\linewidth]{imgs/decentralized.png}
+    \includegraphics[width=\linewidth]{decentralized.png}
     \caption{Distributed Bookkeeping}
     \label{fig:decentralized}
 \end{figure}
@@ -191,7 +192,7 @@ Since anyone can instantaneously create a blockchain wallet, cryptographic signa
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=120pt]{imgs/paperwork.jpg}
+    \includegraphics[width=120pt]{paperwork.jpg}
     \caption{Average Book-Entry Trade Paperwork}
 \end{figure}
 
@@ -231,7 +232,7 @@ Subsequently, it makes sense that most brokers don't want to serve low-value inv
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=420pt]{imgs/msg-map.jpg}
+    \includegraphics[width=420pt]{msg-map.jpg}
     \caption{Medallion Signature Guarantee Participants \cite{MSG_2022}}
 \end{figure}
 
@@ -253,7 +254,7 @@ Subsequently, it makes sense that most brokers don't want to serve low-value inv
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=420pt]{imgs/ownership-simplified.png}
+    \includegraphics[width=400pt]{ownership-simplified.png}
     \caption{Simplified View of Appendix \ref{appendix-b}}
 \end{figure}
 \pagebreak
