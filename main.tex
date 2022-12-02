@@ -1,12 +1,10 @@
 \input{preamble.tex}
 \documentclass[11pt, english]{article}
 \usepackage{graphicx, textcomp, seqsplit, cite, tikz, latexsym, float, changepage}
+\usepackage{caption, enumitem, amsmath,amssymb,amsthm,listings,hyperref, titlesec}
 \usepackage{lettrine, pdfpages, lscape, multicol, blindtext, amsfonts, xcolor}
-\usepackage{caption, enumitem, amsmath,amssymb,amsthm,listings,hyperref}
-\usepackage[tabular,lining]{montserrat}
 \usepackage[square,numbers]{natbib}
 \usepackage[bottom]{footmisc}
-\graphicspath{{./images/}}
 \setlength\columnsep{.5in}
 \usepackage[a4paper,
     bindingoffset=0in,
@@ -16,30 +14,44 @@
     bottom=1.25in,
     footskip=.25in
 ]{geometry}
-\newenvironment{myfontMonterserrat}{\fontfamily{montserrat}\selectfont}{\par}
 \pagenumbering{arabic}
+
 \begin{document}
 \thispagestyle{empty}
+
 \vspace*{.2in}
 \begin{figure}
     \centering
     \includegraphics[width=240pt]{imgs/logo.png}
 \end{figure}
+
+
+
 \begin{center}
     \parbox{4.5in}{
-        \noindent{\small{\textit{Capital markets are supposed to facilitate the efficient formation of capital to support the expansion and growth of business and the creation of employment and prosperity for all of society.\\\textcolor{white}{.}\\But these days the exchanges are all for-profit businesses, and they all seem to be beholden to their best customers... who have the least to do with the purpose for which markets actually exist in the first place.}\\\rightline{--- Erik Townsend}}}
+        \noindent{\small{\textit{
+                Capital markets are supposed to facilitate the efficient formation of capital to support the expansion and growth of business and the creation of employment and prosperity for all of society.
+                \\\textcolor{white}{.}
+                \\But these days the exchanges are all for-profit businesses, and they all seem to be beholden to their best customers... who have the least to do with the purpose for which markets actually exist in the first place.
+            }\\\rightline{--- Erik Townsend}}}
     }
 \end{center}
 \vspace*{.23in}
+
+
+
 \begin{abstract}
-  \noindent Capital markets work, but they're incredibly inefficient. A few powerful institutions: \begin{itemize}
+  
+  \noindent Capital markets work, but they're incredibly inefficient. A few powerful institutions: 
+  \begin{itemize}
       \item control stock lending and margin, generating fake shares en mass;\footnote{How can stocks reach their full market value with mass sales of non-existent shares? See Page \ref{the_problem}.}
       
       \item systematically disenfranchise global investors from buying stocks; \cite{Senate_1974} and
       
-      \item through manipulative systems, ultimately cost investors over \$3.75T/year.\footnote{We estimate these hidden fees cost the average stock investor 0.5\%/year (\$600k after \$1k/month/40 years in indexes).
-}
-  \end{itemize}\vspace{.125in}
+      \item through manipulative systems, ultimately cost investors over \$3.75T/year.\footnote{We estimate these hidden fees cost the average stock investor 0.5\%/year (\$600k after \$1k/month/40 years in indexes).}
+  \end{itemize}
+  \vspace{.125in}
+  
   Transfer agents can uproot industry behemoths by undermining their grasp on capital markets. In particular, all brokers are commingled as but a single investor on the books of public companies. Public firms hire a ``transfer agent'' to maintain these books.\\
   
   The stock transfer agent industry has consolidated to four major providers over the past few decades. Service amongst them has only decreased while prices skyrocket. Issuers are agitated.\\
@@ -48,7 +60,7 @@
   
   We think significantly more investors would use transfer agents if their trading experience felt like a traditional broker. This is possible since private stock sales on your own behalf aren't regulated as stringently as traditional capital markets.\\
   
-  Transfer agents haven't offered a trading interface because old market technology required centralized coordination. Securities laws disallow transfer agents from this. But decentralized ledgers and particularly the Stellar Decentralized Exchange (``SDEX'') let DRS investors match trades from anywhere with zero middlemen.\\
+  Transfer agents haven't offered a trading interface because old market technology required centralized coordination. Securities laws disallow transfer agents from this. But decentralized ledgers and particularly the Stellar Decentralized Exchange (``SDEX'') let DRS investors match trades from anywhere with zero middlemen.
 \end{abstract}
 
 \pagebreak
@@ -123,11 +135,11 @@ See \underline{\href{https://patentcenter.uspto.gov/applications/17396742}{our p
 
 \section{Solution: Use digital assets \textit{as} corporate stock ledgers}
 
-Old transfer agents ("TAs") use paperwork and centralized databases for stock ledgers, which means manual data manipulation for every transfer. But people aren't very reliable when it comes to extremely repetitive math or nuanced numerical systems.
+Old transfer agents use paperwork and centralized databases for stock ledgers, which means manual data manipulation for every transfer. But people aren't very reliable when it comes to extremely repetitive math or nuanced numerical systems.
 
 Unfortunately, the industry is rife with agents making simple arithmetic errors despite one prevalent software suite provider. Moreover, slow response times from overworked agent representatives can frustrate issuers and investors alike.
 
-Regulation gives TAs three days to respond to ``routine'' transfers, meaning you already spent three days getting a medallion stamp. From the moment all your paperwork lands in their mailbox, a TA can sit on their hands for days until they get around to updating their ledger. It's even worse if you try to transfer ``non-routine'' restricted shares. 
+Regulation gives agents three days to respond to ``routine'' transfers, meaning you already spent three days getting a medallion stamp. From the moment all your paperwork lands in their mailbox, an agent can sit on their hands for days until they get around to updating their ledger. It's even worse if you try to transfer ``non-routine'' restricted shares. 
 
 \begin{figure}[H]
     \centering
