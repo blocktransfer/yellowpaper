@@ -1,0 +1,36 @@
+\hbadness=10000
+\vbadness=10000
+
+\def\epsilon{\varepsilon}
+\def\phi{\varphi}
+\def\bool{\{0,1\}}
+\def\poly{{\sf poly}}
+\def\cross{\times}
+
+\newcommand{\xor}{\oplus}
+\newcommand{\Xor}{\bigoplus}
+\newcommand{\ceil}[1]{\left\lceil {#1} \right\rceil}
+\newcommand{\floor}[1]{\left\lfloor #1 \right\rfloor}
+\newcommand{\ignore}[1]{}
+\newcommand{\integers}{{\mathbb Z}}
+\newcommand{\naturals}{{\mathbb N}}
+\newcommand{\bydef}{\stackrel{\rm def}{=}}
+\newcommand{\isequal}{\stackrel{\rm ?}{=}}
+\newcommand{\compeq}{\stackrel{\rm c}{\equiv}}
+
+\newcommand{\qed}{\hspace*{\fill}\rule{7pt}{7pt}}
+\newenvironment{proof_sketch}{\noindent{\bf Sketch of Proof} (Informal)\hspace*{1em}}{\qed\medskip}
+\newenvironment{proof}{\noindent{\bf Proof}\hspace*{1em}}{\qed\medskip}
+\newenvironment{proofof}[1]{\noindent{\bf Proof} of #1:\hspace*{1em}}{\qed\medskip}
+\newenvironment{claim}{\noindent{\bf Claim}\hspace*{1em}\begin{em}}{\end{em}\medskip}
+\newcounter{defcounter}
+\setcounter{defcounter}{1}
+\newenvironment{definition}{\medskip\noindent{\bf Definition \thedefcounter}}{\hspace*{\fill}$\diamondsuit$\stepcounter{defcounter}\medskip}
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{fact}[theorem]{Fact}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newenvironment{assumption}{\noindent{\bf Assumption}\hspace*{1em}\begin{em}}{\end{em}\medskip}
+\newenvironment{remark}{\noindent{\bf Remark}\hspace*{1em}}{\bigskip}
