@@ -33,7 +33,7 @@
 \vspace*{.23in}
 \begin{abstract}
   \noindent Capital markets work, but they're incredibly inefficient. A few powerful institutions: \begin{itemize}
-      \item keep trade clearing slow to maximize margin income while generating fake shares,\footnote{How can stocks reach their full market value with mass sales of non-existent shares? See Page \ref{prov}.}
+      \item keep trade clearing slow to maximize margin income while generating fake shares,\footnote{How can stocks reach their full market value with mass sales of non-existent shares? See Page \ref{the_problem}.}
       \item prevent foreign investors from accessing markets due solely to their demographics, \cite{Cede} and
       \item force the average stock trade through nine slow middlemen who charge big hidden fees.\footnote{We estimate these hidden fees cost the average stock investor 0.5\%/year (\$600k after \$1k/month/40 years in indexes).
 }
@@ -48,23 +48,26 @@
   
   Transfer agents haven't offered a trading interface because old market technology required centralized coordination. Securities laws disallow transfer agents from this. But decentralized ledgers and particularly the Stellar Decentralized Exchange (``SDEX'') let DRS investors match trades from anywhere with zero middlemen.\\
 \end{abstract}
-%\pagebreak
-%\tableofcontents
+
 \pagebreak
 \pagestyle{plain}
 \setcitestyle{numbers}
 \setcounter{page}{1}
-\section{Problem: We broke stocks}\label{prov}
+
+
+
+\section{Problem: We broke stocks}\label{the_problem}
 \large{
-\begin{itemize}
-    \item In 2013, Dole Foods went private for \$1.2B. The company only had 37M shares outstanding, but brokerage investors held 49M shares---12M extra. A third of the company’s investors didn't get paid. \cite{2,3}
-    \item Similarly, two investors bought nearly 1.5M shares of Global Links Corporation through their brokers, despite the company issuing under 1.2M shares. \cite{4,5}
-    \item More recently, one in twenty GameStop shares trading did not exist on the company’s capital books. \cite{6}
-    \item In another case, a fifth of Overstock.com shares trading did not truly exist. \cite{7,8}
-    \item The problem is so big that the leading transfer agent organization suspects more shares voted than exist in over three-quarters of annual meetings. \cite{9}
-    \item In an election at Taser International, brokerage investors cast 82M votes despite only 61M shares existing. \cite{10}
-\end{itemize}
+    \begin{itemize}
+        \item In 2013, Dole Foods went private for \$1.2B. The company only had 37M shares outstanding, but brokerage   investors held 49M shares---12M extra. A third of the company’s investors didn't get paid. \cite{2,3}
+        \item Similarly, two investors bought nearly 1.5M shares of Global Links Corporation through their brokers,     despite the company issuing under 1.2M shares. \cite{4,5}
+        \item More recently, one in twenty GameStop shares trading did not exist on the company’s capital books. \cite{6}
+        \item In another case, a fifth of Overstock.com shares trading did not truly exist. \cite{7,8}
+        \item The problem is so big that the leading transfer agent organization suspects more shares voted than exist in   over three-quarters of annual meetings. \cite{9}
+        \item In an election at Taser International, brokerage investors cast 82M votes despite only 61M shares existing.   \cite{10}
+    \end{itemize}
 }
+
 \begin{multicols}{2}
 
 When we assign all our trust to a few central bookkeepers, we grant them the power to decree data transparency, investor accessibility, and arbitrary economic rents.
@@ -83,11 +86,14 @@ Today, centralized transfer agents slow us down with mountains of paperwork. The
     \item support any investor anywhere.
 \end{itemize}
 
+
+
 \section{Background information}
 
 New investor? See our \underline{\href{http://thesis.blocktransfer.io}{original thesis}} for important finance primitives.\\
 
-\noindent See \href{http://impact.blocktransfer.io}{\underline{\textit{Balancing the World}}} for our social and business inspirations, including:\begin{itemize}
+\noindent See \href{http://impact.blocktransfer.io}{\underline{\textit{Balancing the World}}} for our social and business inspirations, including:
+\begin{itemize}
     \item the true cost of slow markets with hefty hidden spreads, via case studies;
     \item real-world examples of unequal access to capital markets, plus solutions; and
     \item a roadmap for global wealth equality with decentralized asset management.
@@ -97,7 +103,10 @@ New investor? See our \underline{\href{http://thesis.blocktransfer.io}{original 
     \item digital assets \textit{as} a transfer agent's authoritative master securityholder file,
     \item cryptographic signatures in place of medallion signature guarantees, and
     \item digital text memos for censorship-free, trackable distributed proxy voting.
-\end{enumerate} See \underline{\href{https://patentcenter.uspto.gov/applications/17396742}{our patent}} for nuanced technical info.
+\end{enumerate}
+See \underline{\href{https://patentcenter.uspto.gov/applications/17396742}{our patent}} for nuanced technical info.
+
+
 
 \section{Solution: Use digital assets \textit{as} corporate stock ledgers}
 
@@ -113,6 +122,7 @@ Regulation gives TAs three days to respond to ``routine'' transfers, meaning you
     \caption{A Medallion Stamp}
     \label{fig:decentralized}
 \end{figure}
+
 
 \subsection{Automation}
 
@@ -139,6 +149,7 @@ To join the network, investors just privately associate their identity with a cr
 
 Once we confirm investor identities, we map them to the given public keys. These public addresses identify investors both internally for compliance and on the Stellar distributed ledger. Namely, we only approve requests to hold digital assets from good-standing requestor accounts.
 
+
 \subsection{Ledger balances \textit{as} capital books}
 
 We can send investors initial shares from an old transfer agent or legacy broker, entirely on Stellar. Once stock assets land in an investor account, they're free to privately trade with other verified accounts.
@@ -161,6 +172,7 @@ Since anyone can instantaneously create a blockchain wallet, cryptographic signa
 
 Thus, investors not only get their assets instantaneously, but companies also open up their shares to billions traditionally disenfranchised from direct equity investing. That's a big deal for growth-seeking investors abroad waiting to compliantly stash their cash in quality stocks without mountains of paperwork and fees.
 
+
 \subsection{Proxy voting through memos}
 
 No transfer agent has yet tallied investor votes transparently. Rather, quite the opposite is commonplace. Intermediaries count proxy cards behind closed doors, allocate broker votes arbitrarily, and discard unsatisfactory votes without notice. \cite{proxy1,proxy2}
@@ -175,9 +187,12 @@ In the background, we set up a voting address like ``demo*proxyvote.io.'' Then, 
 
 At the meeting, you can simply reconcile vote results from public voting addresses with record-date shareholder balances. Anyone can tally up public transaction memos to verify final counts, and all votes have the same cryptographic security as transfers.
 
+
+
 \section{Conclusion}
 
 This Whitepaper presented three major innovations we use to implement controllable electronic stock records on the Stellar distributed ledger. If you're a public company, we can take care of the whole process for you in just a few steps while handling ongoing investor support and SEC compliance. If you're an investor, we hope to serve your account well.
+
 
 \subsection{We shouldn't exclude six billion people from investing}
 
@@ -189,7 +204,6 @@ Subsequently, it makes sense that most brokers don't want to serve low-value inv
 
 \end{multicols}
 
-\\\\
 \begin{figure}[H]
     \centering
     \includegraphics[width=420pt]{imgs/msg-map.jpg}
@@ -198,6 +212,7 @@ Subsequently, it makes sense that most brokers don't want to serve low-value inv
 
 \pagebreak
 \begin{multicols}{2}
+
 \footnotesize{
     \bibliography{bibliography}
     \bibliographystyle{abbrv}
@@ -206,6 +221,8 @@ Subsequently, it makes sense that most brokers don't want to serve low-value inv
 \end{multicols}
 
 \appendix
+
+
 
 \section{How transfer agents undermine the big banks, brokers, and HFTs}
 
@@ -216,7 +233,10 @@ Subsequently, it makes sense that most brokers don't want to serve low-value inv
 \end{figure}
 \pagebreak
 
+
+
 \section{Where transfer agents fit in trade clearing and settlement}\label{appendix-b}
+
 
 \subsection*{Acronyms}
 
@@ -225,8 +245,8 @@ Subsequently, it makes sense that most brokers don't want to serve low-value inv
   
   \item \textbf{Payment for Order Flow (PFOF):} Payment from a central third-party market maker to a broker-dealer in exchange for unfulfilled trades. Once order flow is sold, the buying firm must fulfill the trade at \textit{any} price within the NBBO range for the last one second.\footnote{Top market makers trade in <120 nanoseconds, enabling riskless arbitrage against your orders.}\footnote{Kickbacks from market makers are disclosed in brokers' quarterly 606 disclosures.}
 \end{itemize}
-\\\\
-\begin{tikzpicture}{.9\textwidth}
+
+\noindent\begin{tikzpicture}{.9\textwidth}
     \node (A) at (-15,1) {\textbf{You}};
     \node (B)[draw, align=left] at (-15,-1.5) {Your Central Broker-Dealer\\or Equivalent Institution};
     \node[draw, align=left] (C) at (-8,-5) {(Internalization) Can the broker-dealer fill this order at \\the NBBO or better (order improvement) from:\\(i) another client from our firm looking to sell the same\\ security simultaneously at market rates or better,\\(ii) a short-term inventory of held extra assets that we\\set up to fulfill orders like this with, or\\(iii) a predetermined specialty asset such as a secondary\\bond for which purchase has already been arranged};
