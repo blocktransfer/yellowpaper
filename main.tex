@@ -33,9 +33,11 @@
 \vspace*{.23in}
 \begin{abstract}
   \noindent Capital markets work, but they're incredibly inefficient. A few powerful institutions: \begin{itemize}
-      \item keep trade clearing slow to maximize margin income while generating fake shares,\footnote{How can stocks reach their full market value with mass sales of non-existent shares? See Page \ref{the_problem}.}
-      \item prevent foreign investors from accessing markets due solely to their demographics, \cite{Cede} and
-      \item force the average stock trade through nine slow middlemen who charge big hidden fees.\footnote{We estimate these hidden fees cost the average stock investor 0.5\%/year (\$600k after \$1k/month/40 years in indexes).
+      \item control stock lending and margin, generating fake shares en mass;\footnote{How can stocks reach their full market value with mass sales of non-existent shares? See Page \ref{the_problem}.}
+      
+      \item systematically disenfranchise global investors from buying stocks; \cite{Senate_1974} and
+      
+      \item through manipulative systems, ultimately cost investors over \$3.75T/year.\footnote{We estimate these hidden fees cost the average stock investor 0.5\%/year (\$600k after \$1k/month/40 years in indexes).
 }
   \end{itemize}\vspace{.125in}
   Transfer agents can uproot industry behemoths by undermining their grasp on capital markets. In particular, all brokers are commingled as but a single investor on the books of public companies. Public firms hire a ``transfer agent'' to maintain these books.\\
@@ -59,12 +61,17 @@
 \section{Problem: We broke stocks}\label{the_problem}
 \large{
     \begin{itemize}
-        \item In 2013, Dole Foods went private for \$1.2B. The company only had 37M shares outstanding, but brokerage   investors held 49M shares---12M extra. A third of the company’s investors didn't get paid. \cite{2,3}
-        \item Similarly, two investors bought nearly 1.5M shares of Global Links Corporation through their brokers,     despite the company issuing under 1.2M shares. \cite{4,5}
-        \item More recently, one in twenty GameStop shares trading did not exist on the company’s capital books. \cite{6}
-        \item In another case, a fifth of Overstock.com shares trading did not truly exist. \cite{7,8}
-        \item The problem is so big that the leading transfer agent organization suspects more shares voted than exist in   over three-quarters of annual meetings. \cite{9}
-        \item In an election at Taser International, brokerage investors cast 82M votes despite only 61M shares existing.   \cite{10}
+        \item In 2013, Dole Foods went private for \$1.2B. The company only had 37M shares outstanding, but brokerage   investors held 49M shares---12M extra. A third of the company’s investors didn't get paid. \cite{Kentouris_2017,Laster_2017}
+        
+        \item Similarly, two investors bought nearly 1.5M shares of Global Links Corporation through their brokers,     despite the company issuing under 1.2M shares. \cite{Faulk_2005,Avery_2005}
+        
+        \item More recently, one in twenty GameStop shares trading did not exist on the company’s capital books. \cite{FTD_2022}
+        
+        \item In another case, a fifth of Overstock.com shares trading did not truly exist. \cite{Economic_2006,Rodriguez_2006}
+        
+        \item The problem is so big that the leading transfer agent organization suspects more shares voted than exist in   over three-quarters of annual meetings. \cite{May_2019}
+        
+        \item In an election at Taser International, brokerage investors cast 82M votes despite only 61M shares existing.   \cite{Racanelli_2018}
     \end{itemize}
 }
 
@@ -82,7 +89,9 @@ When we assign all our trust to a few central bookkeepers, we grant them the pow
 Today, centralized transfer agents slow us down with mountains of paperwork. The nature of their centralized systems require high fixed compatibility costs and human interaction, which often means snail mail and phone calls. But, with a slight change, we think transfer agents are the future of capital markets. We're redesigning capital markets \hbox{\textit{without}} centralized middlemen to:
 \begin{itemize}
     \item eliminate billions/yr in fees,
+    
     \item abolish artificial shares, and
+    
     \item support any investor anywhere.
 \end{itemize}
 
@@ -95,13 +104,17 @@ New investor? See our \underline{\href{http://thesis.blocktransfer.io}{original 
 \noindent See \href{http://impact.blocktransfer.io}{\underline{\textit{Balancing the World}}} for our social and business inspirations, including:
 \begin{itemize}
     \item the true cost of slow markets with hefty hidden spreads, via case studies;
+    
     \item real-world examples of unequal access to capital markets, plus solutions; and
+    
     \item a roadmap for global wealth equality with decentralized asset management.
 \end{itemize}
 
 \noindent This Whitepaper details how to use: \begin{enumerate}
     \item digital assets \textit{as} a transfer agent's authoritative master securityholder file,
+    
     \item cryptographic signatures in place of medallion signature guarantees, and
+    
     \item digital text memos for censorship-free, trackable distributed proxy voting.
 \end{enumerate}
 See \underline{\href{https://patentcenter.uspto.gov/applications/17396742}{our patent}} for nuanced technical info.
@@ -128,7 +141,7 @@ Regulation gives TAs three days to respond to ``routine'' transfers, meaning you
 
 New cryptographic technology lets us use proven mathematics instead of paperwork and trusted central processors. Namely, distributed public ledgers enable global investing by giving everyone the same \textit{digital} trading rules.\footnote{Using "trade" for when an investor transfers shares in exchange for a simultaneous transfer of dollars.}
 
-These new systems can drastically boost investor protection, voting transparency, and market confidence by eliminating hidden back-office errors and processing time. In particular, Stellar ledgers close about every five seconds. Marginally slowing down trading into SDEX batches curtails riskless arbitrage opportunities, enhances investor liquidity, and curbs market volatility. \cite{hft1, hft2, hft3}
+These new systems can drastically boost investor protection, voting transparency, and market confidence by eliminating hidden back-office errors and processing time. In particular, Stellar ledgers close about every five seconds. Marginally slowing down trading into SDEX batches curtails riskless arbitrage opportunities, enhances investor liquidity, and curbs market volatility. \cite{Veryzhenko_2017,Budish_2015,Chakrabarty_2015}
 
 \subsubsection{General overview}
 
@@ -175,7 +188,7 @@ Thus, investors not only get their assets instantaneously, but companies also op
 
 \subsection{Proxy voting through memos}
 
-No transfer agent has yet tallied investor votes transparently. Rather, quite the opposite is commonplace. Intermediaries count proxy cards behind closed doors, allocate broker votes arbitrarily, and discard unsatisfactory votes without notice. \cite{proxy1,proxy2}
+No transfer agent has yet tallied investor votes transparently. Rather, quite the opposite is commonplace. Intermediaries count proxy cards behind closed doors, allocate broker votes arbitrarily, and discard unsatisfactory votes without notice. \cite{Clayton_et_2018,Higgins_2015}
 
 We propose an alternative to mailing proxy cards with secret ``control number'' codes for a black-box voting machine.
 
@@ -207,7 +220,7 @@ Subsequently, it makes sense that most brokers don't want to serve low-value inv
 \begin{figure}[H]
     \centering
     \includegraphics[width=420pt]{imgs/msg-map.jpg}
-    \caption{Medallion Signature Guarantee Participants \cite{MSGP}}
+    \caption{Medallion Signature Guarantee Participants \cite{MSG_2022}}
 \end{figure}
 
 \pagebreak
