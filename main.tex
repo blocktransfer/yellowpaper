@@ -17,6 +17,9 @@
     footskip=.25in
 ]{geometry}
 
+\captionsetup[figure]{name=Fig.}
+\pagecolor{yellow}
+
 \begin{document}
 \thispagestyle{empty}
 
@@ -43,7 +46,9 @@
 
 \begin{abstract}
   
-  \noindent Capital markets work, but they're incredibly inefficient. A few powerful institutions: 
+  \noindent What if you didn't have to wait days for trades to clear, pay exorbitant hidden fees to your broker, or worry about holding counterfeit stock?\cite{Counterfeiting_2023} ..
+  
+  Capital markets work, but they're incredibly inefficient. A few powerful institutions: 
   \begin{itemize}
       \item control stock lending and margin, generating fake shares en mass;\footnote{How can stocks reach their full market value with mass sales of non-existent shares? See Page \ref{the_problem}.}
       
@@ -128,7 +133,7 @@ Block Transfer is currently implementing its transfer agent technology with its 
     \item drastically unequal returns on capital due to centralized asset managers.
 \end{itemize}
 
-\noindent This Whitepaper details \underline{how} to use: \begin{enumerate}
+\noindent This Yellowpaper details \underline{how} to use: \begin{enumerate}
     \item digital assets \textit{as} a transfer agent's authoritative master securityholder file,
     
     \item cryptographic signatures in place of medallion signature guarantees, and
@@ -222,7 +227,7 @@ At the meeting, you can simply reconcile vote results from public voting address
 
 \section{Conclusion}
 
-This Whitepaper presented three major innovations we use to implement controllable electronic stock records on the Stellar distributed ledger. If you're a public company, we can take care of the whole process for you in just a few steps while handling ongoing investor support and SEC compliance. If you're an investor, we hope to serve your account well.
+This Yellowpaper presented three major innovations we use to implement controllable electronic stock records on the Stellar distributed ledger. If you're a public company, we can take care of the whole process for you in just a few steps while handling ongoing investor support and SEC compliance. If you're an investor, we hope to serve your account well.
 
 
 \subsection{We shouldn't exclude six billion people from investing}
@@ -274,7 +279,7 @@ Subsequently, it makes sense that most brokers don't want to serve low-value inv
 \begin{itemize}
   \item \textbf{National Best Bid and Offer (NBBO):} The highest bid and lowest ask limit order unfilled for a stock according to merged data from national securities exchanges.
   
-  \item \textbf{Payment for Order Flow (PFOF):} Payment from a central third-party market maker to a broker-dealer in exchange for unfulfilled trades. Once order flow is sold, the buying firm must fulfill the trade at \textit{any} price within the NBBO range for the last one second.\footnote{Top market makers trade in <120 nanoseconds, enabling riskless arbitrage against your orders.}\footnote{Kickbacks from market makers are disclosed in brokers' quarterly 606 disclosures.}
+  \item \textbf{Payment for Order Flow (PFOF):} Payment from a central third-party market maker to a broker-dealer in exchange for unfulfilled trades. Once order flow is sold, the buying firm must fulfill the trade at \textit{any} price within the NBBO range for the last one second.\footnote{Top market makers trade in under 120 nanoseconds, enabling riskless arbitrage against your orders.}\footnote{Kickbacks from market makers are disclosed in brokers' quarterly 606 disclosures.}
 \end{itemize}
 
 \noindent\begin{tikzpicture}{.9\textwidth}
