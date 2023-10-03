@@ -5,6 +5,7 @@
 \usepackage{lettrine, pdfpages, lscape, multicol, blindtext, amsfonts, xcolor}
 \usepackage[square,numbers]{natbib}
 \usepackage[bottom]{footmisc}
+\usepackage[most]{tcolorbox}
 \setlength\columnsep{.5in}
 \pagenumbering{arabic}
 \graphicspath{{imgs/}}
@@ -17,25 +18,24 @@
     footskip=.25in
 ]{geometry}
 
+\begin{document}
 \captionsetup[figure]{name=Fig.}
 \pagecolor{yellow}
-
-\begin{document}
 \thispagestyle{empty}
 
 \vspace*{.2in}
 \begin{figure}
     \centering
-    \includegraphics[width=240pt]{logo.png}
+    \tcbox[boxrule=.5pt,boxsep=0pt,colback=white]{\includegraphics[width=240pt]{logo.png}}
 \end{figure}
 
-
+\vspace*{-.23in}
 
 \begin{center}
     \parbox{4.5in}{
         \noindent{\small{\textit{
                 Capital markets are supposed to facilitate the efficient formation of capital to support the expansion and growth of business and the creation of employment and prosperity for all of society.
-                \\\textcolor{white}{.}
+                \\\textcolor{yellow}{.}
                 \\But these days the exchanges are all for-profit businesses, and they all seem to be beholden to their best customers... who have the least to do with the purpose for which markets actually exist in the first place.
             }\\\rightline{--- Erik Townsend}}}
     }
@@ -82,20 +82,20 @@
 
 
 
-\section{Problem: We broke stocks}\label{the_problem}
+\section{Banks \& Brokers Decided Long Ago to put Profits Above Accuracy}\label{the_problem}
 \large{
     \begin{itemize}
-        \item In 2013, Dole Foods went private for \$1.2B. The company only had 37M shares outstanding, but brokerage   investors held 49M shares---12M extra. A third of the company’s investors didn't get paid. \cite{Kentouris_2017,Laster_2017}
+        \item Dole Foods went private for \$1.2B in 2013. The company only had 37M shares outstanding, but brokerage investors held 49M shares---12M extra. A third of the company’s supposed investors didn't get paid in a later class action. \cite{Kentouris_2017,Laster_2017}
         
-        \item Similarly, two investors bought nearly 1.5M shares of Global Links Corporation through their brokers,     despite the company issuing under 1.2M shares. \cite{Faulk_2005,Avery_2005}
+        \item Two investors bought $125\%$ of shares in a real estate company in 2005. \cite{Faulk_2005,Avery_2005}
+
+        \item Investors voted $135\%$ of shares in a top US defense contractor's meeting. \cite{Racanelli_2018,Behrendt_et_2006}
         
-        \item More recently, one in twenty GameStop shares trading did not exist on the company’s capital books. \cite{FTD_2022}
+        \item Investors acquired $120\%$ of Overstock.com shares in 2006. \cite{Economic_2006,Rodriguez_2006}
+
+        \item Investors bought 105\% of shares in GameStop in 2022. \cite{FTD_2022}
         
-        \item In another case, a fifth of Overstock.com shares trading did not truly exist. \cite{Economic_2006,Rodriguez_2006}
-        
-        \item The problem is so big that the leading transfer agent organization suspects more shares voted than exist in   over three-quarters of annual meetings. \cite{May_2019}
-        
-        \item In an election at Taser International, brokerage investors cast 82M votes despite only 61M shares existing.   \cite{Racanelli_2018}
+        \item A leading Wall Street organization found more shares voted than issued in $75\%$ of 2019 annual meetings. \cite{May_2019}
     \end{itemize}
 }
 
@@ -105,7 +105,9 @@ When we assign all our trust to a few central bookkeepers, we grant them the pow
 
 \begin{figure}[H]
     \raggedleft 
-    \includegraphics[width=\linewidth]{centralized.png}
+    \tcbox[boxrule=0.5pt,boxsep=0pt,colback=white]{
+      \includegraphics[width=\linewidth]{centralized.png}
+    }
     \caption{Centralized Bookkeeping}
     \label{fig:centralized}
 \end{figure}
@@ -121,10 +123,9 @@ Today, centralized transfer agents slow us down with mountains of paperwork. The
 
 
 
-\section{Background information}
+\section{This Yellowpaper}
 
-
-Block Transfer is currently implementing its transfer agent technology with its first private company client. We aim to revolutionize the way investors trade. We're tired of:
+We believe registered ownership (as in not held by rent-seeking brokers) will remedy:
 \begin{itemize}
     \item the true costs of slow, opaque markets with hefty hidden spreads,
     \item unequal access to capital markets and commission-free investments, and
@@ -138,11 +139,10 @@ Block Transfer is currently implementing its transfer agent technology with its 
     
     \item digital text memos for censorship-free, trackable distributed proxy voting.
 \end{enumerate}
-Implementation in our original \underline{\href{https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/20220284507}{patent application}}.
 
 
 
-\section{Solution: Use digital assets \textit{as} corporate stock ledgers}
+\section{Digital Transfer Agent}
 
 Old transfer agents use paperwork and centralized databases for stock ledgers, which means manual data manipulation for every transfer. But people aren't very reliable when it comes to extremely repetitive math or nuanced numerical systems.
 
@@ -152,7 +152,9 @@ Regulation gives agents three days to respond to ``routine'' transfers, meaning 
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=180]{medallion.jpg}
+    \tcbox[boxrule=0.5pt,boxsep=0pt,colback=white]{
+      \includegraphics[width=180pt]{medallion.jpg}
+    }
     \caption{A Medallion Stamp}
     \label{fig:decentralized}
 \end{figure}
@@ -174,14 +176,16 @@ Instead of manipulating Excel spreadsheets, digital assets use programmatic ``at
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=\linewidth]{decentralized.png}
+    \tcbox[boxrule=0.5pt,boxsep=0pt,colback=white]{
+      \includegraphics[width=\linewidth]{decentralized.png}
+    }
     \caption{Distributed Bookkeeping}
     \label{fig:decentralized}
 \end{figure}
 
 To join the network, investors just privately associate their identity with a cryptographic public key. In practice, investors complete standard identity verification onboarding and generate a Stellar keypair.\footnote{Since investors never share their private keys, only they can digitally sign transfers through a wallet.}
 
-Once we confirm investor identities, we map them to the given public keys. These public addresses identify investors both internally for compliance and on the Stellar distributed ledger. Namely, we only approve requests to hold digital assets from good-standing requestor accounts.
+Once we confirm investor identities, we map them to the given public keys. These public addresses identify investors both internally for compliance and on the Stellar distributed ledger (but without the PII).
 
 
 \subsection{Ledger balances \textit{as} capital books}
@@ -201,7 +205,7 @@ Since anyone can instantaneously create a blockchain wallet, cryptographic signa
 \begin{figure}[H]
     \centering
     \includegraphics[width=120pt]{paperwork.jpg}
-    \caption{Average Book-Entry Trade Paperwork}
+    \caption{Book-Entry Trade Bank Paperwork}
 \end{figure}
 
 Thus, investors not only get their assets instantaneously, but companies also open up their shares to billions traditionally disenfranchised from direct equity investing. That's a big deal for growth-seeking investors abroad waiting to compliantly stash their cash in quality stocks without mountains of paperwork and fees.
@@ -262,7 +266,9 @@ Subsequently, it makes sense that most brokers don't want to serve low-value inv
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=400pt]{simplified.png}
+    \tcbox[boxrule=0.5pt,boxsep=-3pt,colback=white]{
+      \includegraphics[width=380pt]{simplified.png}
+    }
     \caption{Simplified View of Appendix \ref{appendix-brokers}}
 \end{figure}
 \pagebreak
@@ -426,7 +432,9 @@ Subsequently, it makes sense that most brokers don't want to serve low-value inv
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=480pt]{imgs/DTCC-pyramid.png}
+    \tcbox[boxrule=0.5pt,boxsep=-3pt,colback=white]{
+      \includegraphics[width=455pt]{imgs/DTCC-pyramid.png}
+    }
     \caption{Expanded View of Appendix \ref{appendix-intro}}
 \end{figure}
 
@@ -436,7 +444,7 @@ Subsequently, it makes sense that most brokers don't want to serve low-value inv
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=480pt]{imgs/street-name.jpg}
+    \includegraphics[width=475pt]{imgs/street-name.jpg}
     \caption{Expanded View of Appendix \ref{appendix-expanded}\cite{Infrastructure_2021}}
 \end{figure}
 
